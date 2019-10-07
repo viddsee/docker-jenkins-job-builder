@@ -6,6 +6,9 @@ ENV VERSION 3.0.2
 
 WORKDIR /opt
 
+RUN apk update && apk upgrade && \
+    apk add --no-cache git
+
 RUN cd /opt \
 	&& git clone -b ${VERSION} --single-branch https://opendev.org/jjb/jenkins-job-builder.git \
 	&& cd /opt/jenkins-job-builder \
