@@ -16,5 +16,3 @@ RUN cd /opt \
 	&& python setup.py install \
 	&& mkdir /.cache && chmod 777 /.cache \
 	&& rm -R /opt/jenkins-job-builder
-
-ENTRYPOINT ["/usr/local/bin/jenkins-jobs"]
